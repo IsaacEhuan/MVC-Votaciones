@@ -1,0 +1,8 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "MVCVotaciones/jcommon-1.0.23.jar",
+        "MVCVotaciones/jfreechart-1.0.19.jar",
+        "MVCVotaciones/json-simple-1.1.1.jar"
+    ]
+}
