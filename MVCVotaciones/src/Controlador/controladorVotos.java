@@ -1,5 +1,4 @@
 package Controlador;
-
 import Modelo.Producto;
 import Modelo.actualizableImp;
 import Vista.vistaDocumentoPlano;
@@ -30,6 +29,7 @@ public class controladorVotos implements ActionListener{
     //private vistaDocumentoPlano vistaDoc;
     private vistaGraficaPastel vistaGraficaPastel;
     private vistaGraficaBarras vistaGraficabarras;
+    public String funcion="";
 
     public controladorVotos(actualizableImp actualizable, vistaPrincipal VistaPrincipal/*, vistaDocumentoPlano vistaDoc*/, vistaGraficaPastel vistaPastel, vistaGraficaBarras barras) {
         this.actualizable = actualizable;
@@ -52,6 +52,9 @@ public class controladorVotos implements ActionListener{
             //vistaDoc.getjTable1().setValueAt(actualizable.getProductoUnoVotos(), 0, 0);
             generarGraficaDePastel();
             generarGraficaDeBarras();
+            funcion=Thread.currentThread().getStackTrace()[1].getMethodName();
+            bitacora.agregarInfo1(funcion);
+
         }
         if(VistaPrincipal.getjButton2()== evento.getSource()){
             actualizable.actualizarProductoDos();
